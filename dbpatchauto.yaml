@@ -6,17 +6,17 @@
   gather_facts: false
   name: "Copy db files and install it then reboot"
   tasks:
-    - name: Copying ...
+    - name: Copying1 ...
       copy:
         dest: "{{dest}}"
         src: "{{source}}"
-    - name: Installing ...
+    - name: Installing1 ...
       command: "sudo dpkg -i /home/azureuser/mssqldebdest/mssql-server_15.0.4153.1-6_amd64.deb"
       register: command_output_lines
     -
       debug:
         msg: "{{ command_output_lines.stdout_lines }}"
-    - name: Rebooting ...
+    - name: Rebooting1 ...
       reboot:
         reboot_timeout: 60
         test_command: uptime
