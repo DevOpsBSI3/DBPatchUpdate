@@ -4,7 +4,7 @@
   serial: 1
   become: yes
   gather_facts: false
-  name: "Copy db files and install it then reboot..."
+  name: "Copy db files and install it then reboot"
   tasks:
     - name: Copying
       copy:
